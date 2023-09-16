@@ -5,10 +5,9 @@ import Dashboard from "./data/scenes/dashboard";
 import { Routes,Route } from "react-router-dom";
 import Sidebar from "./data/scenes/global/Sidebar";
 import { useState } from "react";
-
-//import Team from "./scenes/team";
-//import Invoices from "./scenes/invoices";
-//import Contacts from "./scenes/contacts";
+import Team from "./data/scenes/team";
+import Invoices from "./data/scenes/invoices";
+import Contacts from "./data/scenes/contacts";
 //import Bar from "./scenes/bar";
 //import Form from "./scenes/form";
 //import Line from "./scenes/line";
@@ -25,13 +24,16 @@ function App() {
         <CssBaseline/>
 
     <div className="app">
-    <Topbar setIsSidebar={setIsSidebar}/>
     <Sidebar isSidebar={isSidebar} />
+    
+   
       <main className="content">
-      
+      <Topbar setIsSidebar={setIsSidebar}/>
         <Routes>
-          <Route path="/" element={Dashboard}/>
-           
+          <Route path="/" element={<Dashboard/>}/>
+          <Route path="/team" element={<Team/>}/>
+          <Route path="/contacts" element={<Contacts/>}></Route>
+          <Route path="/invoices" element={<Invoices/>}></Route>
         </Routes>
       </main>
     </div>
