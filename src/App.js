@@ -8,7 +8,7 @@ import { useState } from "react";
 import Team from "./data/scenes/team";
 import Invoices from "./data/scenes/invoices";
 import Contacts from "./data/scenes/contacts";
-//import Bar from "./scenes/bar";
+import Bar from "./data/scenes/bar";
 import Form from "./data/scenes/form";
 //import Line from "./scenes/line";
 //import Pie from "./scenes/pie";
@@ -35,6 +35,7 @@ function App() {
           <Route path="/contacts" element={<Contacts/>}></Route>
           <Route path="/invoices" element={<Invoices/>}></Route>
           <Route path="/form" element={<Form/>}></Route>
+          <Route path="/bar" element={<Bar/>}></Route>
         </Routes>
       </main>
     </div>
