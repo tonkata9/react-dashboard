@@ -12,9 +12,9 @@ import Bar from "./data/scenes/bar";
 import Form from "./data/scenes/form";
 //import Line from "./scenes/line";
 import Pie from "./data/scenes/pie";
-//import FAQ from "./scenes/faq";
 //import Geography from "./scenes/geography";
-//import Calendar from "./scenes/calendar/calendar";
+import Calendar from "./data/scenes/calendar";
+import FAQ from "./data/scenes/faq";
 function App() {
   const [theme,colorMode]=useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -37,6 +37,8 @@ function App() {
           <Route path="/form" element={<Form/>}></Route>
           <Route path="/bar" element={<Bar/>}></Route>
           <Route path="/pie" element={<Pie/>}></Route>
+          <Route path="/calendar" element={<Calendar/>}></Route>
+          <Route path="/faq" element={<FAQ/>}></Route>
         </Routes>
       </main>
     </div>
