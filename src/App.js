@@ -10,11 +10,13 @@ import Invoices from "./data/scenes/invoices";
 import Contacts from "./data/scenes/contacts";
 import Bar from "./data/scenes/bar";
 import Form from "./data/scenes/form";
-//import Line from "./scenes/line";
+
 import Pie from "./data/scenes/pie";
 //import Geography from "./scenes/geography";
 import Calendar from "./data/scenes/calendar";
 import FAQ from "./data/scenes/faq";
+import Line from "./data/scenes/line";
+import Geography from "./data/scenes/geography";
 function App() {
   const [theme,colorMode]=useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -39,6 +41,8 @@ function App() {
           <Route path="/pie" element={<Pie/>}></Route>
           <Route path="/calendar" element={<Calendar/>}></Route>
           <Route path="/faq" element={<FAQ/>}></Route>
+          <Route path="/line" element={<Line/>}></Route>
+          <Route path="/geography" element={<Geography/>}></Route>
         </Routes>
       </main>
     </div>
